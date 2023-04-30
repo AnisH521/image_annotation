@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from image_db import img_db, Base
 
-engine = create_engine("sqlite:///image_db.sqlite3")
+engine = create_engine(os.environ.get("DATABASE_URL"))
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind = engine)
 sess = Session()
