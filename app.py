@@ -3,6 +3,7 @@ from streamlit_image_coordinates import streamlit_image_coordinates
 
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
+import os
 
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
