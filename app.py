@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from image_db import img_db, Base
 
-engine = create_engine(os.environ.get("DATABASE_URL"))
+engine = create_engine("sqlite:///image_db.sqlite3")
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind = engine)
 sess = Session()
@@ -28,7 +28,7 @@ with st.container():
         - Finally submit the image for the betterment of human civilization :frog: 
         """
     )
-    name_input = st.text_input(
+    user_name_input = st.text_input(
             "So what is your name ? :clown_face:",
             value = ""
         )
@@ -72,7 +72,6 @@ with st.container():
             "Enter the font size of text 👇",
             key = int,
             min_value = 5, 
-            max_value = 70,
             step = 1
         )
         col3, col4 = st.columns(2)
@@ -117,7 +116,8 @@ with st.container():
             if submit:
                 try:
                     entry = img_db(
-                        name = name_input,
+                        user_name = user_name_input,
+                        file_name = uploaded_image.name,
                         img = byte_im
                     )
                     sess.add(entry)

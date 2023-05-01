@@ -8,5 +8,9 @@ Base = declarative_base()
 class img_db(Base):
     __tablename__ = "image_database"
     id = Column(Integer, primary_key = True)
-    name = Column(Text, nullable = True)
-    img = Column(LargeBinary, unique = False, nullable = False)  
+    user_name = Column(Text, nullable = True)
+    file_name = Column(Text, nullable = False)
+    img = Column(LargeBinary, unique = False, nullable = False)
+
+#engine = create_engine("sqlite:///image_db.sqlite3")
+#Base.metadata.create_all(engine)
