@@ -2,11 +2,11 @@ import psycopg2
 from PIL import Image
 import io
 
-conn = psycopg2.connect(host = "dpg-ch7rfo82qv2864obrud0-a.oregon-postgres.render.com",
+conn = psycopg2.connect(host = "hostname",
                         port = 5432, 
                         database = "image_database", 
                         user = "image_database_user", 
-                        password = "2ygmOfAGddzefeniRaRWRtR77mQwyvUu")
+                        password = "***************")
 
 query = "SELECT img FROM image_database WHERE id = 3"
 
