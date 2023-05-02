@@ -103,7 +103,7 @@ with st.container():
         if uploaded_image:
             I1 = ImageDraw.Draw(rgb_image)
 
-            font = ImageFont.truetype('arial.ttf', font_size)    
+            font = ImageFont.truetype('font/arial.ttf', font_size)    
             I1.text(tuple_val, text_input, font = font, fill = txt_clr)
             st.image(rgb_image, caption = 'uploaded_image')
 
