@@ -20,7 +20,6 @@ st.set_page_config(
     layout = "wide",
 )
 
-
 with st.container():
     st.title("An Application for taking Annotated Pictorial data from Users")
     st.header("How to :green[USE] :star:")
@@ -49,7 +48,7 @@ with st.container():
         st.text("click on any position of image to know its coordinate")
         value = streamlit_image_coordinates(
             rgb_image,
-            key = "local",
+            key = "pil",
         )
         st.write(value)
     else:
