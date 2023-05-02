@@ -3,11 +3,11 @@ import io
 from PIL import Image
 import openpyxl
 
-conn = psycopg2.connect(host = "dpg-ch7rfo82qv2864obrud0-a.oregon-postgres.render.com",
+conn = psycopg2.connect(host = "hostname",
                         port = 5432, 
                         database = "image_database", 
                         user = "image_database_user", 
-                        password = "2ygmOfAGddzefeniRaRWRtR77mQwyvUu")
+                        password = "***************")
 
 query = "SELECT user_name, file_name, img FROM image_database"
 
