@@ -12,6 +12,7 @@ To run this project, clone this repository and run following commands :
 
 ```
 git clone https://github.com/AnisH521/image_annotation.git
+pip install -r requirements.txt
 cd image_annotation
 streamlit run app.py
 ```
