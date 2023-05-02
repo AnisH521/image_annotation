@@ -14,6 +14,13 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind = engine)
 sess = Session()
 
+st.set_page_config(
+    page_title = "image annotation",
+    page_icon = ":frame_with_picture:",
+    layout = "wide",
+)
+
+
 with st.container():
     st.title("An Application for taking Annotated Pictorial data from Users")
     st.header("How to :green[USE] :star:")
