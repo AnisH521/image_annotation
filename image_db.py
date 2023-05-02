@@ -8,7 +8,7 @@ Base = declarative_base()
 class img_db(Base):
     __tablename__ = "image_database"
     id = Column(Integer, primary_key = True)
-    user_name = Column(Text, nullable = True)
+    user_name = Column(Text, nullable = False)
     file_name = Column(Text, nullable = False)
     img = Column(LargeBinary, unique = False, nullable = False)
 
